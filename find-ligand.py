@@ -38,6 +38,7 @@ for k, v in state.items():
     state_fixed[k[7:]] = v
 model.load_state_dict(state_fixed)
 model.to(device)
+model.eval()
 
 
 df_compound = pd.read_csv('dcid_smi.tsv', delimiter='\t')
